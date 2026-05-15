@@ -22,7 +22,7 @@ export default async function CarsPage() {
               <p className="text-gray-400 text-sm">{car.categories?.name}</p>
               <div className="mt-3 flex justify-between items-center">
                 <span className="text-green-600 font-bold">
-                  ${((car.price_cents ?? 0) / 100).toLocaleString()}
+                  ${(Number(car.price_cents ?? 0) / 100).toLocaleString()}
                 </span>
                 <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">
                   {car.fuel_type ?? 'N/A'}
