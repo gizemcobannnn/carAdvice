@@ -11,7 +11,7 @@ export default async function CarsPage() {
 
   return (
     <main className="p-8">
-      <h1 className="text-3xl font-bold mb-6">Browse Cars</h1>
+      <h1 className="text-4xl font-bold mb-6">Browse Cars</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {cars.map((car) => (
@@ -21,7 +21,7 @@ export default async function CarsPage() {
               <p className="text-gray-500">{car.brands?.name}</p>
               <p className="text-gray-400 text-sm">{car.categories?.name}</p>
               <div className="mt-3 flex justify-between items-center">
-                <span className="text-green-600 font-bold">
+                <span className="text-green-800 font-bold text-3xl">
                   ${(Number(car.price_cents ?? 0) / 100).toLocaleString()}
                 </span>
                 <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">
