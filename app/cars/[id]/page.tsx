@@ -67,9 +67,9 @@ export default async function CarDetailPage({ params }: { params: { id: string }
             </div>
           </div>
         )}
-        <a href="/cars" className="text-white-900 font-semibold  text-sm">
+        <Link href="/cars" className="text-white-900 font-semibold  text-sm">
           ← Back to listings
-        </a>
+        </Link>
       </main>
     );
 
