@@ -13,10 +13,10 @@ export default async function CarsPage() {
     <main className="p-8">
       <h1 className="text-4xl font-bold mb-6">Browse Cars</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
         {cars.map((car) => (
-          <Link href={`/cars/${car.id}`} key={car.id}>
-            <div className="border rounded-xl p-4 hover:shadow-lg transition cursor-pointer">
+          <Link href={`/cars/${car.id}`} key={car.id} className=''>
+            <div className="border rounded-xl p-4 hover:shadow-lg transition cursor-pointer grid grid-cols-5">
               <h2 className="text-lg font-semibold">{car.title}</h2>
               <p className="text-gray-500">{car.brands?.name}</p>
               <p className="text-gray-400 text-sm">{car.categories?.name}</p>
