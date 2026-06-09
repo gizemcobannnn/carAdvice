@@ -14,7 +14,7 @@ export default async function CarDetailPage({ params }: { params: { id: string }
     if (!car) notFound();
 // brand should be named by the category
     return (
-      <main className="p-8 max-w-3xl mx-auto">
+      <main className="p-10 max-w-4xl w-1/4 mx-auto text-center">
         <h1 className="text-3xl font-bold mb-1">{car.title}</h1>
         <p className="text-gray-500 mb-6">
           {car.brands?.name} · {car.categories?.name}
@@ -67,7 +67,7 @@ export default async function CarDetailPage({ params }: { params: { id: string }
             </div>
           </div>
         )}
-        <Link href="/cars" className="text-white-900 font-semibold  text-sm">
+        <Link href="/cars" className="text-white-900 font-semibold  text-sm no-underline ">
           ← Back to listings
         </Link>
       </main>
