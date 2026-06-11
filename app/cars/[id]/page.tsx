@@ -14,7 +14,7 @@ export default async function CarDetailPage({ params }: { params: { id: string }
     if (!car) notFound();
 // brand should be named by the category
     return (
-      <main className="p-10 max-w-4xl w-1/4 mx-auto text-center">
+      <main className="p-10 max-w-4xl w-1/4 mx-auto text-center flex flex-col max-h-screen">
         <h1 className="text-3xl font-bold mb-1">{car.title}</h1>
         <p className="text-gray-500 mb-6">
           {car.brands?.name} · {car.categories?.name}
@@ -53,7 +53,7 @@ export default async function CarDetailPage({ params }: { params: { id: string }
           </div>
         </div>
         {car.car_features.length > 0 && (
-          <div className="mb-8">
+          <div className="">
             <h2 className="text-xl font-semibold mb-3">Features</h2>
             <div className="flex flex-wrap gap-2">
               {car.car_features.map((cf) => (
@@ -67,7 +67,7 @@ export default async function CarDetailPage({ params }: { params: { id: string }
             </div>
           </div>
         )}
-        <Link href="/cars" className="text-white-900 font-semibold  text-sm no-underline ">
+        <Link href="/cars"    className="mt-12 text-slate-400 hover:text-amber-400 font-semibold text-sm flex items-center justify-center transition-colors">
           ← Back to listings
         </Link>
       </main>
